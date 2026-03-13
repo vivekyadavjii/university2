@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LU Connect</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f4f4;
+}
+
+/* NAVBAR */
+
+header{
+background:#7b1113;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:white;
+margin:10px;
+text-decoration:none;
+font-size:16px;
+}
+
+/* HERO */
+
+.hero{
+background:#eee;
+padding:60px;
+text-align:center;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.btn{
+background:#7b1113;
+color:white;
+padding:10px 20px;
+border:none;
+cursor:pointer;
+margin:10px;
+}
+
+/* CARDS */
+
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+padding:30px;
+}
+
+.card{
+background:white;
+width:250px;
+margin:15px;
+padding:20px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+/* ISSUE FORM */
+
+.form-section{
+background:white;
+margin:30px;
+padding:30px;
+border-radius:10px;
+}
+
+input, textarea, select{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+/* DISCUSSION */
+
+.post{
+background:white;
+margin:20px;
+padding:20px;
+border-radius:8px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h2>LU Connect</h2>
+
+<nav>
+<a href="#">Home</a>
+<a href="#issue">Submit Issue</a>
+<a href="#discussion">Discussion</a>
+<a href="#notice">Notice</a>
+
+<select id="language">
+<option value="en">English</option>
+<option value="hi">हिंदी</option>
+</select>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1 id="title">Your Voice, Your Campus</h1>
+
+<p id="subtitle">
+Platform for students, professors and workers to share problems.
+</p>
+
+<button class="btn">Submit Issue</button>
+
+</section>
+
+<!-- FEATURES -->
+
+<div class="container">
+
+<div class="card">
+<h3>Issues</h3>
+<p>Report campus problems.</p>
+</div>
+
+<div class="card">
+<h3>Discussion</h3>
+<p>Discuss solutions.</p>
+</div>
+
+<div class="card">
+<h3>Notice Board</h3>
+<p>University updates.</p>
+</div>
+
+</div>
+
+<!-- ISSUE FORM -->
+
+<div class="form-section" id="issue">
+
+<h2>Submit Issue</h2>
+
+<input type="text" placeholder="Your Name">
+
+<select>
+<option>Student</option>
+<option>Professor</option>
+<option>Worker</option>
+</select>
+
+<select>
+<option>Hostel Issue</option>
+<option>Classroom Issue</option>
+<option>Administration</option>
+<option>Campus Facility</option>
+</select>
+
+<textarea rows="5" placeholder="Describe your issue"></textarea>
+
+<button class="btn">Submit</button>
+
+</div>
+
+<!-- DISCUSSION -->
+
+<div id="discussion">
+
+<div class="post">
+<h3>Hostel Water Problem</h3>
+<p>Water supply is not working properly in hostel.</p>
+</div>
+
+<div class="post">
+<h3>Library Timing</h3>
+<p>Library should stay open till 10 PM.</p>
+</div>
+
+</div>
+
+<!-- NOTICE BOARD -->
+
+<div class="form-section" id="notice">
+
+<h2>Notice Board</h2>
+
+<p>📢 Mid semester exams start from 10 April.</p>
+<p>📢 Scholarship form deadline: 30 March.</p>
+
+</div>
+
+<footer>
+
+<p>LU Connect © 2026</p>
+
+</footer>
+
+<script>
+
+/* LANGUAGE SWITCH */
+
+document.getElementById("language").addEventListener("change", function(){
+
+let lang=this.value
+
+if(lang==="hi"){
+
+document.getElementById("title").innerText="आपकी आवाज़, आपका कैंपस"
+
+document.getElementById("subtitle").innerText=
+"छात्रों, प्रोफेसरों और कर्मचारियों के लिए अपनी समस्याएं साझा करने का मंच।"
+
+}
+
+else{
+
+document.getElementById("title").innerText="Your Voice, Your Campus"
+
+document.getElementById("subtitle").innerText=
+"Platform for students, professors and workers to share problems."
+
+}
+
+})
+
+</script>
+
+</body>
+</html>
